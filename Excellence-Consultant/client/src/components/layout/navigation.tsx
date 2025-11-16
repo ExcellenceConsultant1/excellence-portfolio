@@ -36,11 +36,8 @@ export default function Navigation() {
               <img 
                 src={logoImage} 
                 alt="Excellence Consultant Logo" 
-                className="h-[6.75rem] w-auto object-contain"
+                className="h-30 w-auto object-contain"
               />
-              <div className="text-2xl font-black gradient-text">
-                Excellence Consultant
-              </div>
             </div>
           </motion.div>
 
