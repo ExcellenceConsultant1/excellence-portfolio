@@ -23,7 +23,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-white/10" data-testid="navigation">
+    <nav className="sticky top-0 z-50 bg-white backdrop-blur-sm border-b border-gray-200 shadow-sm" data-testid="navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div 
@@ -50,7 +50,7 @@ export default function Navigation() {
               <motion.button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-300 hover:text-white transition-all duration-300 font-semibold hover:text-shadow-glow relative group"
+                className="text-gray-700 hover:text-gray-900 transition-all duration-300 font-semibold relative group"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -67,10 +67,10 @@ export default function Navigation() {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-gray-300"
+              className="text-gray-700 hover:text-gray-900"
               data-testid="mobile-menu-button"
             >
-              {isOpen ? <X className="text-white" /> : <Menu className="text-white" />}
+              {isOpen ? <X className="text-gray-700" /> : <Menu className="text-gray-700" />}
             </Button>
           </div>
         </div>
@@ -86,12 +86,12 @@ export default function Navigation() {
               transition={{ duration: 0.3 }}
               data-testid="mobile-nav-menu"
             >
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-md border-t border-white/10">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white backdrop-blur-md border-t border-gray-200">
                 {navItems.map((item) => (
                   <button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left px-3 py-2 text-gray-200 hover:text-white transition-all duration-300 font-medium hover:bg-white/10 rounded-lg"
+                    className="block w-full text-left px-3 py-2 text-gray-700 hover:text-gray-900 transition-all duration-300 font-medium hover:bg-gray-100 rounded-lg"
                     data-testid={`mobile-nav-link-${item.label.toLowerCase().replace(' ', '-')}`}
                   >
                     {item.label}
