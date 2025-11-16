@@ -108,9 +108,9 @@ export default function ContactSection() {
       description: "Professional networking",
       link: "https://www.linkedin.com/in/nishant-joshi-94561515b",
       linkText: "Connect with us",
-      color: "from-purple-500 to-purple-700",
-      textColor: "text-purple-600",
-      hoverColor: "hover:text-purple-200"
+      color: "from-gray-600 to-gray-800",
+      textColor: "text-gray-400",
+      hoverColor: "hover:text-gray-200"
     },
     {
       icon: "🚀",
@@ -204,7 +204,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   disabled={contactMutation.isPending}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-105"
+                  className="w-full bg-gradient-to-r from-blue-600 to-gray-700 hover:from-blue-700 hover:to-gray-800 text-white py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-105"
                   data-testid="contact-submit-button"
                 >
                   {contactMutation.isPending ? "Sending..." : "Send Message 🚀"}
