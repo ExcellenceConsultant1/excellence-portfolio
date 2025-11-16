@@ -98,14 +98,14 @@ export default function AppointmentSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <motion.div 
-            className="bg-gray-800 rounded-3xl p-8 hover-lift border border-gray-600"
+            className="clean-card p-8"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             data-testid="appointment-form"
           >
-            <h3 className="text-3xl font-black text-white mb-8">OptiFinance Assessment</h3>
+            <h3 className="text-3xl font-semibold text-white mb-8">Book Consultation</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -205,7 +205,7 @@ export default function AppointmentSection() {
               <Button
                 type="submit"
                 disabled={appointmentMutation.isPending}
-                className="w-full bg-gradient-to-r from-electric-blue to-neon-purple hover:from-neon-purple hover:to-quantum-pink text-white py-5 rounded-2xl font-bold text-lg hover-lift glow-effect animate-pulse-glow"
+                className="w-full bg-gradient-to-r from-electric-blue to-neon-purple hover:opacity-90 text-white py-5 rounded-lg font-semibold text-lg simple-hover"
                 data-testid="appointment-submit-button"
               >
                 {appointmentMutation.isPending ? "Booking..." : "Book Appointment 📅"}
@@ -221,17 +221,17 @@ export default function AppointmentSection() {
             viewport={{ once: true }}
           >
             <motion.div 
-              className="bg-gradient-to-br from-tech-green to-cyber-cyan text-white rounded-3xl p-8 hover-lift glow-effect border border-white/10"
+              className="clean-card bg-gradient-to-br from-tech-green to-cyber-cyan text-white p-8"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
               data-testid="whatsapp-direct-card"
             >
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6 glow-effect">💬</div>
+              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center text-3xl mb-6">💬</div>
               <h3 className="text-3xl font-black mb-4 text-white">Instant OptiFinance Connect</h3>
               <p className="mb-6 text-white font-light leading-relaxed">Direct access to our AI-powered advisory team. Real-time solutions and strategic guidance at your fingertips.</p>
               <Button
                 asChild
-                className="bg-green-600 text-white hover:bg-green-700 px-10 py-4 rounded-2xl font-bold text-lg transition-all hover-lift shadow-lg"
+                className="bg-green-600 text-white hover:bg-green-700 px-10 py-4 rounded-lg font-semibold text-lg transition-colors simple-shadow"
                 data-testid="whatsapp-direct-button"
               >
                 <a href="https://wa.me/919033316252" target="_blank" rel="noopener noreferrer">
@@ -241,18 +241,18 @@ export default function AppointmentSection() {
             </motion.div>
 
             <motion.div 
-              className="bg-gradient-to-br from-electric-blue to-neon-purple text-white rounded-3xl p-8 hover-lift glow-effect border border-white/10"
+              className="clean-card bg-gradient-to-br from-electric-blue to-neon-purple text-white p-8"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
               data-testid="call-direct-card"
             >
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6 glow-effect">📞</div>
+              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center text-3xl mb-6">📞</div>
               <h3 className="text-3xl font-black mb-4 text-white">Voice Intelligence</h3>
               <p className="mb-6 text-white font-light leading-relaxed">Connect with our OptiFinance-powered financial architects. Immediate strategic consultation and intelligent advisory services.</p>
               <div className="space-y-3">
                 <Button
                   asChild
-                  className="w-full bg-blue-600 text-white hover:bg-blue-700 px-10 py-4 rounded-2xl font-bold text-lg transition-all hover-lift shadow-lg"
+                  className="w-full bg-blue-600 text-white hover:bg-blue-700 px-10 py-4 rounded-lg font-semibold text-lg transition-colors simple-shadow"
                   data-testid="call-direct-button"
                 >
                   <a href="tel:+919033316252">
@@ -261,7 +261,7 @@ export default function AppointmentSection() {
                 </Button>
                 <Button
                   asChild
-                  className="w-full bg-cyan-600 text-white hover:bg-cyan-700 px-10 py-4 rounded-2xl font-bold text-lg transition-all hover-lift shadow-lg"
+                  className="w-full bg-cyan-600 text-white hover:bg-cyan-700 px-10 py-4 rounded-lg font-semibold text-lg transition-colors simple-shadow"
                   data-testid="call-direct-button-alt"
                 >
                   <a href="tel:+918849998420">

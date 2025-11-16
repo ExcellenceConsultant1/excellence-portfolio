@@ -10,7 +10,7 @@ export default function ChatWidget() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute bottom-16 right-0 glass-card rounded-2xl p-6 max-w-sm border border-white/20"
+            className="absolute bottom-16 right-0 clean-card p-6 max-w-sm"
             initial={{ opacity: 0, scale: 0, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0, y: 20 }}
@@ -18,21 +18,21 @@ export default function ChatWidget() {
             data-testid="chat-bubble"
           >
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-electric-blue to-neon-purple rounded-2xl flex items-center justify-center text-white text-lg mr-3 glow-effect">
+              <div className="w-10 h-10 bg-gradient-to-r from-electric-blue to-neon-purple rounded-lg flex items-center justify-center text-white text-lg mr-3">
                 ⚡
               </div>
-              <div className="font-black text-white">OptiFinance Assistant</div>
+              <div className="font-semibold text-white">Chat with Us</div>
             </div>
-            <p className="text-gray-200 text-sm mb-4 font-light leading-relaxed">
-              Activate intelligent financial consultation. Our OptiFinance-powered advisory system is ready to optimize your business operations.
+            <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+              Get instant support via WhatsApp. Our team is ready to help with your financial needs.
             </p>
             <Button
               asChild
-              className="bg-gradient-to-r from-tech-green to-cyber-cyan hover:from-cyber-cyan hover:to-tech-green text-white px-6 py-3 rounded-2xl text-sm font-bold transition-all hover-lift glow-effect w-full"
+              className="bg-gradient-to-r from-tech-green to-cyber-cyan hover:opacity-90 text-white px-6 py-3 rounded-lg text-sm font-semibold simple-hover w-full"
               data-testid="chat-bubble-button"
             >
               <a href="https://wa.me/919033316252" target="_blank" rel="noopener noreferrer">
-                Initialize OptiFinance Link
+                Chat on WhatsApp
               </a>
             </Button>
           </motion.div>
@@ -40,7 +40,7 @@ export default function ChatWidget() {
       </AnimatePresence>
 
       <motion.div
-        className="bg-gradient-to-r from-electric-blue to-neon-purple text-white p-4 rounded-full glow-effect hover:from-neon-purple hover:to-quantum-pink transition-all cursor-pointer floating animate-pulse-glow"
+        className="bg-gradient-to-r from-electric-blue to-neon-purple text-white p-4 rounded-full hover:opacity-90 transition-opacity cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}

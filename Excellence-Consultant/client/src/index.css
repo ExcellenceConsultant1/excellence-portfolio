@@ -79,41 +79,21 @@
 
 @layer utilities {
   .hero-bg {
-    background: var(--gradient-optifinance);
+    background: linear-gradient(135deg, rgba(17, 25, 40, 0.95) 0%, rgba(88, 28, 135, 0.85) 50%, rgba(15, 23, 42, 0.95) 100%);
     position: relative;
   }
   
-  .hero-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, 
-      hsla(217, 91%, 60%, 0.1) 0%, 
-      hsla(262, 90%, 50%, 0.2) 30%, 
-      hsla(316, 79%, 58%, 0.1) 60%, 
-      hsla(189, 94%, 43%, 0.1) 100%);
-    backdrop-filter: blur(2px);
+  .clean-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    transition: all 0.3s ease;
   }
   
-  .glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-  }
-  
-  .neo-shadow {
-    box-shadow: 
-      0 1px 3px rgba(0, 0, 0, 0.12),
-      0 1px 2px rgba(0, 0, 0, 0.24),
-      0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-  }
-  
-  .floating {
-    animation: float 6s ease-in-out infinite;
+  .clean-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
   }
   
   .gradient-text {
@@ -123,63 +103,70 @@
     -webkit-text-fill-color: transparent;
   }
   
-  .glow-effect {
-    box-shadow: 
-      0 0 20px rgba(98, 102, 208, 0.4),
-      0 0 40px rgba(98, 102, 208, 0.2),
-      0 0 80px rgba(98, 102, 208, 0.1);
+  .section-underline {
+    display: inline-block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--tech-green), var(--cyber-cyan));
+    margin-top: 1rem;
   }
   
-  .hover-lift {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  .simple-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
   
-  .hover-lift:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 
-      0 25px 50px -12px rgba(0, 0, 0, 0.25),
-      0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  .simple-hover {
+    transition: all 0.3s ease;
   }
   
-  .text-shadow-glow {
-    text-shadow: 0 0 20px rgba(98, 102, 208, 0.5);
+  .simple-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .accent-line {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .accent-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--tech-green), var(--cyber-cyan));
+    border-radius: 2px;
   }
 }
 
-@keyframes float {
-  0%, 100% { 
-    transform: translateY(0px) rotate(0deg); 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  33% { 
-    transform: translateY(-12px) rotate(2deg); 
-  }
-  66% { 
-    transform: translateY(-8px) rotate(-2deg); 
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(98, 102, 208, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(98, 102, 208, 0.6), 0 0 80px rgba(98, 102, 208, 0.3);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
 }
 
 /* Custom scrollbar */

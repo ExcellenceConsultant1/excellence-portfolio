@@ -150,7 +150,7 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 cartoon-shadow" data-testid="contact-form">
+            <div className="clean-card p-8" data-testid="contact-form">
               <h3 className="text-2xl font-bold mb-6">Send us a Message 💌</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -224,7 +224,7 @@ export default function ContactSection() {
               {contactMethods.map((method, index) => (
                 <motion.div
                   key={index}
-                  className={`bg-gradient-to-br ${method.color} rounded-3xl p-6 cartoon-shadow hover:transform hover:scale-105 transition-all`}
+                  className={`clean-card bg-gradient-to-br ${method.color} p-6`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -254,7 +254,7 @@ export default function ContactSection() {
             </div>
 
             <motion.div 
-              className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 cartoon-shadow"
+              className="clean-card p-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}

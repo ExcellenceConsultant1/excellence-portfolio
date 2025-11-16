@@ -23,7 +23,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="glass-card sticky top-0 z-50 border-b border-white/10" data-testid="navigation">
+    <nav className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-white/10" data-testid="navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div 

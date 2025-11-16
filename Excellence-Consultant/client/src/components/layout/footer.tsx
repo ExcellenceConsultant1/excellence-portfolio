@@ -16,19 +16,19 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="text-3xl font-black gradient-text mb-4" data-testid="footer-logo">
-              <span className="bg-gradient-to-r from-electric-blue to-neon-purple w-10 h-10 rounded-2xl inline-flex items-center justify-center mr-3 glow-effect">
+            <div className="text-2xl font-bold gradient-text mb-4" data-testid="footer-logo">
+              <span className="bg-gradient-to-r from-electric-blue to-neon-purple w-10 h-10 rounded-lg inline-flex items-center justify-center mr-3">
                 <span className="text-white text-lg">⚡</span>
               </span>
               Excellence Consultant
             </div>
-            <p className="text-gray-200 mb-8 leading-relaxed font-light">
-              Engineering the future of autonomous financial intelligence. OptiFinance-powered systems delivering exponential business optimization and strategic value creation.
+            <p className="text-gray-300 mb-8 leading-relaxed">
+              Engineering the future of financial intelligence. AI-powered systems delivering business optimization and strategic value.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://wa.me/919033316252"
-                className="w-12 h-12 bg-gradient-to-r from-tech-green to-cyber-cyan rounded-2xl flex items-center justify-center text-white hover-lift glow-effect transition-all"
+                className="w-12 h-12 bg-gradient-to-r from-tech-green to-cyber-cyan rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
                 data-testid="footer-whatsapp-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -37,7 +37,7 @@ export default function Footer() {
               </a>
               <a
                 href="https://www.linkedin.com/in/nishant-joshi-94561515b"
-                className="w-12 h-12 bg-gradient-to-r from-electric-blue to-neon-purple rounded-2xl flex items-center justify-center text-white hover-lift glow-effect transition-all"
+                className="w-12 h-12 bg-gradient-to-r from-electric-blue to-neon-purple rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
                 data-testid="footer-linkedin-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -46,7 +46,7 @@ export default function Footer() {
               </a>
               <a
                 href="https://www.upwork.com/freelancers/~014b03570b8c198a1a?mp_source=share"
-                className="w-12 h-12 bg-gradient-to-r from-optifinance-orange to-quantum-pink rounded-2xl flex items-center justify-center text-white hover-lift glow-effect transition-all"
+                className="w-12 h-12 bg-gradient-to-r from-optifinance-orange to-quantum-pink rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
                 data-testid="footer-upwork-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -62,7 +62,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h5 className="font-black text-xl gradient-text mb-6">OptiFinance Solutions</h5>
+            <h5 className="font-semibold text-lg gradient-text mb-6">Services</h5>
             <ul className="space-y-2 text-gray-300">
               <li><button onClick={() => scrollToSection("#services")} className="hover:text-white transition-colors">Smart Bookkeeping</button></li>
               <li><button onClick={() => scrollToSection("#services")} className="hover:text-white transition-colors">Tax Planning</button></li>
@@ -79,7 +79,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h5 className="font-black text-xl gradient-text mb-6">Intelligence Hub</h5>
+            <h5 className="font-semibold text-lg gradient-text mb-6">Company</h5>
             <ul className="space-y-2 text-gray-300">
               <li><button onClick={() => scrollToSection("#about")} className="hover:text-white transition-colors">About Us</button></li>
               <li><button onClick={() => scrollToSection("#software")} className="hover:text-white transition-colors">Our Software</button></li>
@@ -94,7 +94,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h5 className="font-black text-xl gradient-text mb-6">OptiFinance Network</h5>
+            <h5 className="font-semibold text-lg gradient-text mb-6">Contact</h5>
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-center">
                 <span className="mr-2">📞</span>
@@ -118,8 +118,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-300 font-light">
-            © 2024 Excellence Consultant. OptiFinance-powered financial intelligence systems. Engineering tomorrow's business optimization.
+          <p className="text-gray-400 text-sm">
+            © 2024 Excellence Consultant. All rights reserved.
           </p>
         </div>
       </div>

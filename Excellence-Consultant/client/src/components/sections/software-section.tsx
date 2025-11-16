@@ -45,49 +45,27 @@ export default function SoftwareSection() {
     joinWaitlistMutation.mutate(email);
   };
 
-  const floatingIcons = [
-    { emoji: "🤖", className: "top-10 right-10 text-4xl", delay: 0 },
-    { emoji: "⚡", className: "bottom-20 left-10 text-3xl", delay: 1 },
-    { emoji: "🔮", className: "top-1/2 right-1/4 text-5xl", delay: 2 },
-  ];
-
   return (
-    <section id="software" className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white relative overflow-hidden" data-testid="software-section">
-      <div className="absolute inset-0">
-        {floatingIcons.map((icon, index) => (
-          <motion.div
-            key={index}
-            className={`floating absolute ${icon.className} opacity-30`}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.3, scale: 1 }}
-            transition={{ duration: 1, delay: icon.delay }}
-          >
-            {icon.emoji}
-          </motion.div>
-        ))}
-      </div>
-
+    <section id="software" className="py-24 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white relative overflow-hidden" data-testid="software-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <motion.div 
-            className="inline-flex items-center bg-gradient-to-r from-optifinance-orange to-quantum-pink text-white px-6 py-3 rounded-2xl font-bold mb-6 glow-effect"
-            whileHover={{ scale: 1.05 }}
-            data-testid="launching-soon-badge"
-          >
+          <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">What We Do</p>
+          <div className="section-underline mx-auto"></div>
+          <div className="inline-flex items-center bg-gradient-to-r from-optifinance-orange to-quantum-pink text-white px-6 py-3 rounded-lg font-semibold mb-8 mt-8">
             <span className="mr-2">⚡</span>
-            OPTIFINANCE SYSTEM LOADING
-          </motion.div>
-          <h2 className="text-4xl md:text-5xl font-black mb-6" data-testid="software-title">
-            <span className="gradient-text text-shadow-glow">Launch Finance Optimizer</span>
+            LAUNCHING SOON
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="software-title">
+            <span className="gradient-text">Financial Optimizer</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed">
-            Next-generation autonomous financial intelligence system. OptiFinance networks and deep learning algorithms execute complex bookkeeping operations with precision in hours, not weeks.
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Next-generation autonomous financial intelligence system powered by AI and deep learning algorithms.
           </p>
         </motion.div>
 
@@ -139,39 +117,39 @@ export default function SoftwareSection() {
                     {feature.icon}
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-2">{feature.title}</h4>
-                    <p className="text-blue-100">{feature.description}</p>
+                    <h4 className="text-xl font-semibold mb-2">{feature.title}</h4>
+                    <p className="text-gray-300 text-sm">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
             <motion.div 
-              className="glass-card rounded-3xl p-8 neo-shadow border border-white/10"
+              className="clean-card p-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               data-testid="waitlist-form"
             >
-              <h4 className="text-2xl font-bold mb-4 gradient-text">Join OptiFinance Network</h4>
-              <p className="text-gray-300 mb-6 font-light">Gain exclusive early access to revolutionary AI-powered financial automation. Limited beta testing spots available.</p>
+              <h4 className="text-2xl font-bold mb-4 gradient-text">Join the Waitlist</h4>
+              <p className="text-gray-300 mb-6">Gain exclusive early access to AI-powered financial automation. Limited beta spots available.</p>
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
                 <Input
                   type="email"
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   data-testid="waitlist-email-input"
                 />
                 <Button
                   type="submit"
                   disabled={joinWaitlistMutation.isPending}
-                  className="bg-gradient-to-r from-optifinance-orange to-quantum-pink hover:from-quantum-pink hover:to-electric-blue text-white px-10 py-4 rounded-2xl font-bold transition-all hover-lift glow-effect"
+                  className="bg-gradient-to-r from-optifinance-orange to-quantum-pink hover:opacity-90 text-white px-10 py-4 rounded-lg font-semibold simple-hover"
                   data-testid="waitlist-submit-button"
                 >
-                  {joinWaitlistMutation.isPending ? "Initializing..." : "Access OptiFinance System"}
+                  {joinWaitlistMutation.isPending ? "Joining..." : "Join Waitlist"}
                 </Button>
               </form>
             </motion.div>
@@ -184,34 +162,18 @@ export default function SoftwareSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <motion.div 
-              className="glass-card rounded-3xl p-8 neo-shadow transform rotate-2 hover:rotate-0 transition-transform duration-500 border border-white/10"
-              whileHover={{ scale: 1.02 }}
+            <div 
+              className="clean-card p-8"
               data-testid="software-mockup"
             >
               <img 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
                 alt="Financial analytics dashboard" 
-                className="w-full h-64 object-cover rounded-2xl mb-4"
+                className="w-full h-64 object-cover rounded-lg mb-4"
               />
-              <h5 className="text-xl font-bold text-white mb-2 text-shadow-glow">OptiFinance Analytics Interface</h5>
-              <p className="text-gray-300 font-light">Quantum-powered financial intelligence and predictive automation</p>
-            </motion.div>
-            
-            <motion.div 
-              className="absolute -top-4 -left-4 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              💡
-            </motion.div>
-            <motion.div 
-              className="absolute -bottom-4 -right-4 bg-yellow-500 text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              ⚡
-            </motion.div>
+              <h5 className="text-xl font-semibold text-white mb-2">Analytics Dashboard</h5>
+              <p className="text-gray-400 text-sm">AI-powered financial intelligence and automation</p>
+            </div>
           </motion.div>
         </div>
       </div>

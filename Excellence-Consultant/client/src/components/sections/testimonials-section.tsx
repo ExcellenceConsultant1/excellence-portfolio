@@ -26,20 +26,22 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50" data-testid="testimonials-section">
+    <section className="py-24 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800" data-testid="testimonials-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-testid="testimonials-title">
-            What Our Clients Say ⭐
+          <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Media</p>
+          <div className="section-underline mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 mt-8" data-testid="testimonials-title">
+            Client <span className="gradient-text">Success</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients have to say about our services.
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Here's what our satisfied clients have to say about our services.
           </p>
         </motion.div>
 
@@ -47,20 +49,19 @@ export default function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
-              className="bg-white rounded-3xl p-8 cartoon-shadow"
+              className="clean-card p-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
               viewport={{ once: true }}
-              whileHover={{ y: -5, scale: 1.02 }}
               data-testid={`testimonial-card-${index}`}
             >
               <div className="flex items-center mb-4">
-                <div className="text-yellow-400 text-xl">
+                <div className="text-yellow-500 text-lg">
                   {"⭐".repeat(testimonial.rating)}
                 </div>
               </div>
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed">
                 "{testimonial.content}"
               </p>
               <div className="flex items-center">
@@ -71,10 +72,10 @@ export default function TestimonialsSection() {
                   data-testid={`testimonial-image-${index}`}
                 />
                 <div>
-                  <div className="font-semibold text-gray-900" data-testid={`testimonial-name-${index}`}>
+                  <div className="font-semibold text-white" data-testid={`testimonial-name-${index}`}>
                     {testimonial.name}
                   </div>
-                  <div className="text-gray-600" data-testid={`testimonial-position-${index}`}>
+                  <div className="text-gray-400 text-sm" data-testid={`testimonial-position-${index}`}>
                     {testimonial.position}
                   </div>
                 </div>

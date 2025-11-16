@@ -3,32 +3,34 @@ import founderImage from "@assets/WhatsApp Image 2025-08-08 at 1.52.24 AM_175459
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 relative overflow-hidden" data-testid="about-section">
+    <section id="about" className="py-24 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 relative overflow-hidden" data-testid="about-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6" data-testid="about-title">
-            <span className="gradient-text">Visionary</span> Leadership
+          <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Who We Are</p>
+          <div className="section-underline mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 mt-8" data-testid="about-title">
+            Intelligence in <span className="gradient-text">Innovation</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
-            Elite financial architects pioneering the next generation of AI-driven business intelligence and automated financial operations.
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Excellence Consultant is a catalyst for change. We are a financial technology company driven by a mission to reshape businesses and uplift entrepreneurial success.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div 
             className="space-y-8"
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="glass-card rounded-3xl p-8 neo-shadow border border-white/10">
+            <div className="clean-card p-8">
               <div className="flex items-center mb-6">
                 <img 
                   src={founderImage} 
@@ -38,45 +40,41 @@ export default function AboutSection() {
                 />
                 <div>
                   <h3 className="text-2xl font-bold text-white" data-testid="founder-name">Co-Founder</h3>
-                  <p className="gradient-text font-bold">OptiFinance Architect & AI Strategist</p>
+                  <p className="gradient-text font-semibold">Financial Architect & AI Strategist</p>
                 </div>
               </div>
-              <p className="text-gray-300 leading-relaxed font-light">
-                12 years in finance leading smart tool development, RL optimization & predictive systems to reduce cost & time across manufacturing and diverse industries.
+              <p className="text-gray-300 leading-relaxed">
+                12 years in finance leading smart tool development, optimization systems & predictive analytics to reduce cost & time across manufacturing and diverse industries.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div 
-                className="glass-card rounded-2xl p-6 hover-lift border border-white/10"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
+              <div 
+                className="clean-card p-6"
                 data-testid="mission-card"
               >
-                <div className="text-3xl mb-4 bg-gradient-to-r from-tech-green to-cyber-cyan p-3 rounded-xl w-fit glow-effect">
-                  <span className="text-white">🎯</span>
+                <div className="text-3xl mb-4">
+                  <span>🎯</span>
                 </div>
-                <h4 className="text-xl font-bold text-white mb-3">OptiFinance Mission</h4>
-                <p className="text-gray-300 font-light">Architect autonomous financial ecosystems that eliminate operational friction and accelerate exponential growth.</p>
-              </motion.div>
-              <motion.div 
-                className="glass-card rounded-2xl p-6 hover-lift border border-white/10"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
+                <h4 className="text-xl font-semibold text-white mb-3">Our Mission</h4>
+                <p className="text-gray-400 text-sm">Build autonomous financial systems that eliminate friction and accelerate business growth.</p>
+              </div>
+              <div 
+                className="clean-card p-6"
                 data-testid="vision-card"
               >
-                <div className="text-3xl mb-4 bg-gradient-to-r from-optifinance-orange to-quantum-pink p-3 rounded-xl w-fit glow-effect">
-                  <span className="text-white">🚀</span>
+                <div className="text-3xl mb-4">
+                  <span>🚀</span>
                 </div>
-                <h4 className="text-xl font-bold text-white mb-3">Quantum Vision</h4>
-                <p className="text-gray-300 font-light">Pioneer the future of OptiFinance intelligence for next-generation global enterprises.</p>
-              </motion.div>
+                <h4 className="text-xl font-semibold text-white mb-3">Our Vision</h4>
+                <p className="text-gray-400 text-sm">Pioneer the future of financial intelligence for next-generation enterprises.</p>
+              </div>
             </div>
           </motion.div>
 
           <motion.div 
-            className="space-y-6"
-            initial={{ opacity: 0, x: 30 }}
+            className="space-y-8"
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -84,36 +82,34 @@ export default function AboutSection() {
             <img 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
               alt="Modern office workspace" 
-              className="rounded-3xl shadow-2xl w-full"
+              className="rounded-2xl w-full simple-shadow"
               data-testid="office-image"
             />
             
-            <motion.div 
-              className="bg-gradient-to-r from-electric-blue via-neon-purple to-quantum-pink rounded-3xl p-8 text-white glow-effect"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
+            <div 
+              className="clean-card p-8"
               data-testid="highlights-card"
             >
-              <h4 className="text-2xl font-bold mb-4 text-shadow-glow">OptiFinance Advantages</h4>
+              <h4 className="text-2xl font-semibold text-white mb-6">Key Strengths</h4>
               <ul className="space-y-4">
-                <li className="flex items-center">
-                  <span className="mr-4 bg-white/20 p-2 rounded-lg">⚡</span>
-                  <span className="font-medium">12+ Years OptiFinance Development</span>
+                <li className="flex items-center text-gray-300">
+                  <span className="mr-4 text-2xl">⚡</span>
+                  <span>12+ Years Development Excellence</span>
                 </li>
-                <li className="flex items-center">
-                  <span className="mr-4 bg-white/20 p-2 rounded-lg">🧠</span>
-                  <span className="font-medium">Deep Learning Architecture</span>
+                <li className="flex items-center text-gray-300">
+                  <span className="mr-4 text-2xl">🧠</span>
+                  <span>AI & Machine Learning Architecture</span>
                 </li>
-                <li className="flex items-center">
-                  <span className="mr-4 bg-white/20 p-2 rounded-lg">🚀</span>
-                  <span className="font-medium">Quantum-Speed Processing</span>
+                <li className="flex items-center text-gray-300">
+                  <span className="mr-4 text-2xl">🚀</span>
+                  <span>Rapid Deployment Solutions</span>
                 </li>
-                <li className="flex items-center">
-                  <span className="mr-4 bg-white/20 p-2 rounded-lg">🏭</span>
-                  <span className="font-medium">Industrial AI Specialists</span>
+                <li className="flex items-center text-gray-300">
+                  <span className="mr-4 text-2xl">🏭</span>
+                  <span>Industry-Specific Expertise</span>
                 </li>
               </ul>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
