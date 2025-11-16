@@ -10,9 +10,10 @@ channel = "stable-24_11"
 packages = ["unzip"]
 
 [deployment]
-run = ["node", "index.js"]
+run = ["bash", "-c", "cd Excellence-Consultant && npm run start"]
 deploymentTarget = "autoscale"
 ignorePorts = false
+build = ["bash", "-c", "cd Excellence-Consultant && npm run build"]
 
 [agent]
 expertMode = true
