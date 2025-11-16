@@ -32,12 +32,15 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex items-center" data-testid="logo">
+            <div className="flex items-center gap-3" data-testid="logo">
               <img 
                 src={logoImage} 
-                alt="Excellence Consultant" 
-                className="h-14 w-auto object-contain"
+                alt="Excellence Consultant Logo" 
+                className="h-16 w-auto object-contain"
               />
+              <div className="text-2xl font-black gradient-text">
+                Excellence Consultant
+              </div>
             </div>
           </motion.div>
 
