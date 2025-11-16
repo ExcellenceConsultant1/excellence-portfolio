@@ -36,7 +36,7 @@ export default function Navigation() {
               <img 
                 src={logoImage} 
                 alt="Excellence Consultant Logo" 
-                className="h-27 w-auto object-contain"
+                className="h-22 w-auto object-contain"
               />
             </div>
           </motion.div>
