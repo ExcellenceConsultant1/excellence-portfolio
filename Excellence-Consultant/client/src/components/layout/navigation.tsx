@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoImage from "@/assets/excellence-logo.jpeg";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,12 +31,11 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex items-center" data-testid="logo">
-              <img 
-                src={logoImage} 
-                alt="Excellence Consultant" 
-                className="h-12 w-auto object-contain rounded-lg bg-white px-3 py-1.5"
-              />
+            <div className="text-2xl font-black gradient-text" data-testid="logo">
+              <span className="bg-gradient-to-r from-electric-blue to-neon-purple w-8 h-8 rounded-lg inline-flex items-center justify-center mr-3 glow-effect">
+                <span className="text-white text-lg">⚡</span>
+              </span>
+              Excellence Consultant
             </div>
           </motion.div>
 
