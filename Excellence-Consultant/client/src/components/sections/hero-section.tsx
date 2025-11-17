@@ -64,21 +64,21 @@ export default function HeroSection() {
           >
             <div className="clean-card p-8" data-testid="stat-experience">
               <div className="text-5xl md:text-6xl font-bold text-white mb-3">
-                <AnimatedCounter end={12} suffix="+" />
+                <AnimatedCounter end={15} suffix="+" />
               </div>
-              <div className="text-gray-400 font-medium text-sm tracking-wide">Years of Innovation</div>
+              <div className="text-gray-400 font-medium text-sm tracking-wide">Years of Experience</div>
             </div>
             <div className="clean-card p-8" data-testid="stat-clients">
               <div className="text-5xl md:text-6xl font-bold text-white mb-3">
-                <AnimatedCounter end={150} suffix="+" />
+                <AnimatedCounter end={10} suffix="+" />
               </div>
-              <div className="text-gray-400 font-medium text-sm tracking-wide">Businesses Transformed</div>
+              <div className="text-gray-400 font-medium text-sm tracking-wide">Business Transformed</div>
             </div>
             <div className="clean-card p-8" data-testid="stat-entities">
               <div className="text-5xl md:text-6xl font-bold text-white mb-3">
-                <AnimatedCounter end={200} suffix="+" />
+                <AnimatedCounter end={6} suffix="+" />
               </div>
-              <div className="text-gray-400 font-medium text-sm tracking-wide">Entities Optimized</div>
+              <div className="text-gray-400 font-medium text-sm tracking-wide">Software & Application Created</div>
             </div>
           </motion.div>
         </div>
