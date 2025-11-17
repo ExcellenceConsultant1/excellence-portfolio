@@ -36,6 +36,24 @@ export default function Footer() {
                 💬
               </a>
               <a
+                href="#"
+                className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
+                data-testid="footer-facebook-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📘
+              </a>
+              <a
+                href="#"
+                className="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
+                data-testid="footer-instagram-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📷
+              </a>
+              <a
                 href="https://www.linkedin.com/in/nishant-joshi-94561515b"
                 className="w-12 h-12 bg-gradient-to-r from-electric-blue to-neon-purple rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
                 data-testid="footer-linkedin-link"
@@ -43,15 +61,6 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 💼
-              </a>
-              <a
-                href="https://www.upwork.com/freelancers/~014b03570b8c198a1a?mp_source=share"
-                className="w-12 h-12 bg-gradient-to-r from-optifinance-orange to-quantum-pink rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
-                data-testid="footer-upwork-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🚀
               </a>
             </div>
           </motion.div>

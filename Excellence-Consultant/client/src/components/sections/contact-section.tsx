@@ -73,16 +73,6 @@ export default function ContactSection() {
       hoverColor: "hover:text-green-200"
     },
     {
-      icon: "💬",
-      title: "WhatsApp",
-      description: "Instant responses, quick solutions",
-      link: "https://wa.me/918849998420",
-      linkText: "+91 88499 98420",
-      color: "from-green-500 to-green-700",
-      textColor: "text-green-600",
-      hoverColor: "hover:text-green-200"
-    },
-    {
       icon: "📞",
       title: "Phone",
       description: "Direct line to our experts",
@@ -93,16 +83,6 @@ export default function ContactSection() {
       hoverColor: "hover:text-blue-200"
     },
     {
-      icon: "📱",
-      title: "Phone",
-      description: "Direct line to our experts",
-      link: "tel:+918849998420",
-      linkText: "+91 88499 98420",
-      color: "from-cyan-500 to-cyan-700",
-      textColor: "text-cyan-600",
-      hoverColor: "hover:text-cyan-200"
-    },
-    {
       icon: "💼",
       title: "LinkedIn",
       description: "Professional networking",
@@ -111,16 +91,6 @@ export default function ContactSection() {
       color: "from-gray-600 to-gray-800",
       textColor: "text-gray-400",
       hoverColor: "hover:text-gray-200"
-    },
-    {
-      icon: "🚀",
-      title: "Upwork Profile",
-      description: "View our work history & reviews",
-      link: "https://www.upwork.com/freelancers/~014b03570b8c198a1a?mp_source=share",
-      linkText: "Visit Profile",
-      color: "from-orange-500 to-orange-700",
-      textColor: "text-orange-600",
-      hoverColor: "hover:text-orange-200"
     }
   ];
 
