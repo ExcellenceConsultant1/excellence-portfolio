@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import founderImage from "@assets/WhatsApp Image 2025-08-08 at 1.52.24 AM_1754599054423.jpeg";
+import founderImage from "@/assets/cofounder-photo.jpeg";
 
 export default function AboutSection() {
   return (
