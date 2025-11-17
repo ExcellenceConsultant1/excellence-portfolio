@@ -23,11 +23,11 @@ export default function AboutSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="space-y-8">
           <motion.div 
-            className="space-y-8"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -66,45 +66,43 @@ export default function AboutSection() {
                 12 years in finance leading smart tool development, optimization systems & predictive analytics to reduce cost & time across manufacturing and diverse industries.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div 
-                className="clean-card p-6"
-                data-testid="mission-card"
-              >
-                <div className="text-3xl mb-4">
-                  <span>🎯</span>
-                </div>
-                <h4 className="text-xl font-semibold text-white mb-3">Our Mission</h4>
-                <p className="text-gray-400 text-sm">Build autonomous financial systems that eliminate friction and accelerate business growth.</p>
-              </div>
-              <div 
-                className="clean-card p-6"
-                data-testid="vision-card"
-              >
-                <div className="text-3xl mb-4">
-                  <span>🚀</span>
-                </div>
-                <h4 className="text-xl font-semibold text-white mb-3">Our Vision</h4>
-                <p className="text-gray-400 text-sm">Pioneer the future of financial intelligence for next-generation enterprises.</p>
-              </div>
-            </div>
           </motion.div>
 
           <motion.div 
-            className="space-y-8"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <img 
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Modern office workspace" 
-              className="rounded-2xl w-full simple-shadow"
-              data-testid="office-image"
-            />
-            
+            <div 
+              className="clean-card p-6"
+              data-testid="mission-card"
+            >
+              <div className="text-3xl mb-4">
+                <span>🎯</span>
+              </div>
+              <h4 className="text-xl font-semibold text-white mb-3">Our Mission</h4>
+              <p className="text-gray-400 text-sm">Build autonomous financial systems that eliminate friction and accelerate business growth.</p>
+            </div>
+            <div 
+              className="clean-card p-6"
+              data-testid="vision-card"
+            >
+              <div className="text-3xl mb-4">
+                <span>🚀</span>
+              </div>
+              <h4 className="text-xl font-semibold text-white mb-3">Our Vision</h4>
+              <p className="text-gray-400 text-sm">Pioneer the future of financial intelligence for next-generation enterprises.</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             <div 
               className="clean-card p-8"
               data-testid="highlights-card"
