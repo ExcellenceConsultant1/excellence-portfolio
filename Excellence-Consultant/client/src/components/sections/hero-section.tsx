@@ -29,7 +29,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             data-testid="hero-description"
           >
-            We are a technology company driven by a mission to reshape industries and uplift lives.
+            Delivering complete financial services—bookkeeping, tax, and reporting—alongside intelligent software, manufacturing automation, and machine-learning–driven optimization solutions that help systems and machinery operate autonomously across every industry.
           </motion.p>
           
           <motion.div 
