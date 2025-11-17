@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import founderImage from "@/assets/founder-photo.jpeg";
+import cofounderImage from "@/assets/cofounder-photo.jpeg";
 
 export default function AboutSection() {
   return (
@@ -50,6 +51,12 @@ export default function AboutSection() {
 
             <div className="clean-card p-8">
               <div className="flex items-center mb-6">
+                <img 
+                  src={cofounderImage} 
+                  alt="Co-Founder" 
+                  className="w-20 h-20 rounded-full mr-6 object-cover"
+                  data-testid="cofounder-image"
+                />
                 <div>
                   <h3 className="text-2xl font-bold text-white" data-testid="cofounder-name">Co-Founder</h3>
                   <p className="gradient-text font-semibold">Financial Architect & AI Strategist</p>
