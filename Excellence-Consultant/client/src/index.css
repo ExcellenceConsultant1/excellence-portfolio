@@ -198,7 +198,7 @@
 .finance-marquee-content {
   display: flex;
   gap: 40px;
-  animation: marquee-scroll 40s linear infinite;
+  animation: marquee-scroll 60s linear infinite;
 }
 
 .finance-marquee:hover .finance-marquee-content {
@@ -254,6 +254,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-66.666%);
   }
 }

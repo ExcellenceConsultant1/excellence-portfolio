@@ -98,7 +98,7 @@ export default function SoftwareSection() {
           <div className="overflow-hidden">
             <div className="finance-marquee">
               <div className="finance-marquee-content">
-                {financeTools.concat(financeTools).map((tool, index) => (
+                {financeTools.concat(financeTools).concat(financeTools).map((tool, index) => (
                   <div
                     key={`${tool.name}-${index}`}
                     className="finance-tool-item"
