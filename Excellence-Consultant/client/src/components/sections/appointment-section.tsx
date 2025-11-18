@@ -92,7 +92,7 @@ export default function AppointmentSection() {
             <span className="gradient-text">Strategic</span> Consultation
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed">
-            Initiate your transformation journey with our OptiFinance-powered financial intelligence experts. Schedule your strategic assessment or connect instantly via our communication channels.
+            Intelligent ML-Driven Finance & Manufacturing Solutions that automate tasks, cut costs, and optimize operations autonomously.
           </p>
         </motion.div>
 
