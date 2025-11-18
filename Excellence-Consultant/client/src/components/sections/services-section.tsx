@@ -56,7 +56,7 @@ export default function ServicesSection() {
             Industry <span className="gradient-text">Solutions</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Advanced financial intelligence systems engineered for business growth and operational excellence.
+            Intelligent Accounting & Tax Solutions Powered by Advanced Autonomous Systems.
           </p>
         </motion.div>
 
