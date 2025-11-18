@@ -186,3 +186,74 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(207, 90%, 45%);
 }
+
+/* Finance Software Marquee */
+.finance-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.finance-marquee-content {
+  display: flex;
+  gap: 40px;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.finance-marquee:hover .finance-marquee-content {
+  animation-play-state: paused;
+}
+
+.finance-tool-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-width: 250px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.finance-tool-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.finance-tool-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.finance-tool-placeholder {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.finance-tool-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

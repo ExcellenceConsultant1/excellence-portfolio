@@ -1,19 +1,30 @@
 import { motion } from "framer-motion";
+import quickbooksLogo from "@/assets/quickbooks.png";
+import xeroLogo from "@/assets/xero.png";
+import sageLogo from "@/assets/sage.png";
+import sapLogo from "@/assets/sap.jpg";
+import tallyLogo from "@/assets/tally.png";
+import zohoLogo from "@/assets/zoho.png";
+import accessDimensionLogo from "@/assets/access-dimension.png";
+import r365Logo from "@/assets/r365.png";
+import gustoLogo from "@/assets/gusto.png";
+import adpLogo from "@/assets/adp.png";
+import turbotaxLogo from "@/assets/turbotax.png";
 
 export default function SoftwareSection() {
   const financeTools = [
-    { name: "QuickBooks", icon: "💼" },
-    { name: "Xero", icon: "📊" },
-    { name: "Sage", icon: "🌿" },
-    { name: "SAP", icon: "🏢" },
-    { name: "Tally", icon: "📈" },
-    { name: "Zoho", icon: "🔧" },
-    { name: "Access Dimension", icon: "📐" },
-    { name: "R365", icon: "🍽️" },
-    { name: "Gusto Payroll", icon: "💰" },
-    { name: "ADP Payroll", icon: "💵" },
-    { name: "TurboTax", icon: "🧾" },
-    { name: "NetSuite", icon: "☁️" }
+    { name: "QuickBooks", logo: quickbooksLogo },
+    { name: "Xero", logo: xeroLogo },
+    { name: "Sage", logo: sageLogo },
+    { name: "SAP", logo: sapLogo },
+    { name: "Tally", logo: tallyLogo },
+    { name: "Zoho", logo: zohoLogo },
+    { name: "Access Dimension", logo: accessDimensionLogo },
+    { name: "R365", logo: r365Logo },
+    { name: "Gusto Payroll", logo: gustoLogo },
+    { name: "ADP Payroll", logo: adpLogo },
+    { name: "TurboTax", logo: turbotaxLogo },
+    { name: "NetSuite", logo: "" }
   ];
 
   const techStack = [
@@ -84,21 +95,29 @@ export default function SoftwareSection() {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Finance Software Expertise</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
-            {financeTools.map((tool, index) => (
-              <motion.div
-                key={tool.name}
-                className="clean-card p-6 text-center hover:shadow-lg transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                data-testid={`finance-tool-${index}`}
-              >
-                <div className="text-4xl mb-3">{tool.icon}</div>
-                <h4 className="text-sm font-semibold text-gray-800">{tool.name}</h4>
-              </motion.div>
-            ))}
+          <div className="overflow-hidden">
+            <div className="finance-marquee">
+              <div className="finance-marquee-content">
+                {financeTools.concat(financeTools).map((tool, index) => (
+                  <div
+                    key={`${tool.name}-${index}`}
+                    className="finance-tool-item"
+                    data-testid={`finance-tool-${index}`}
+                  >
+                    {tool.logo ? (
+                      <img 
+                        src={tool.logo} 
+                        alt={tool.name} 
+                        className="finance-tool-logo"
+                      />
+                    ) : (
+                      <div className="finance-tool-placeholder">☁️</div>
+                    )}
+                    <h4 className="finance-tool-name">{tool.name}</h4>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
 
